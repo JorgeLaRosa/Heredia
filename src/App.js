@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar'
-
+import CartWidget from './components/CartWidget'
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
 
       <NavBar />
-      <CartWidget />
+
     </div>
   );
 

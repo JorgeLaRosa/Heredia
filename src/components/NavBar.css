@@ -22,8 +22,9 @@
 .div-logo{
    width: 60px;
    height: 60px;
-   border: 1px solid black; 
-   background-image: url("/img/Logo1.jpeg")
+   border: 2px solid red;
+  /* background-image: url("../../public/img/Logo1.jpeg"); 
+   background-size: cover;*/
 }
 
 .div-usuario{

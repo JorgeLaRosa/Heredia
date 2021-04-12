@@ -12,21 +12,21 @@ function Menu() {
                 <div className="buscador">
                     <input placeholder="Buscar Producto"></input>
                 </div>
-                <div className="div-logo"></div>
+                <div className="div-logo">Le-Carte LOGO</div>
                 <div className="div-usuario">
-                    <p className="inicia-sesion-div"><a href="#"> Iniciar Sesion </a></p>
-                    <p className="registrarse-div" > <a href="#">Registrarse </a></p>
+                    <p className="inicia-sesion-div">Iniciar Sesion</p>
+                    <p className="registrarse-div" > Registrarse</p>
                 </div>
             </div>
             <div className="nav-inferior">
                 <div className="pestanas">
                     <ul className="ul-pestanas">
 
-                        <li className="pestanas"><a href="#">Sillones</a></li>
-                        <li className="pestanas"><a href="#">Mesas</a></li>
-                        <li className="pestanas"><a href="#">Bibliotecas</a></li>
-                        <li className="pestanas"><a href="#">Roperos</a></li>
-                        <li className="pestanas"><a href="#">Sillas</a></li>
+                        <li className="pestanas">Sillones</li>
+                        <li className="pestanas">Mesas</li>
+                        <li className="pestanas">Bibliotecas</li>
+                        <li className="pestanas">Roperos</li>
+                        <li className="pestanas">Sillas</li>
                     </ul>
 
                 </div>
