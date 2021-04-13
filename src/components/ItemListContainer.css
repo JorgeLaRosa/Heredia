@@ -1,0 +1,17 @@
+.div-ofertas{
+    border: 5px solid black;
+    height: 200px;
+    background-color: lightblue;
+}
+
+.texto-ofertas{
+    width: 80%;
+    font-size: 40px;
+    color: red;
+    font-weight: bolder;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 0;
+}

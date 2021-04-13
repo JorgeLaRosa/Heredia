@@ -1,4 +1,5 @@
 import React from 'react';
+import cart from '../imagenes/cart.png'
 
 
 export default function CartWidget() {
@@ -6,7 +7,7 @@ export default function CartWidget() {
     return (
 
         <div>
-            <h1>LOGOOOOOOO</h1>
+            <img src={cart} height="28" width="28" />
         </div>
     )
 }
