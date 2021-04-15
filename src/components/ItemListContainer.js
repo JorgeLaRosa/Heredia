@@ -3,11 +3,11 @@ import './ItemListContainer.css'
 
 
 
-export default function () {
+export default function ItemListContainer(props) {
 
     return (
         <div className="div-ofertas">
-            <p className="texto-ofertas">CONOCE NUESTRAS OFERTAS DE LA SEMANA!!</p>
+            <p className="texto-ofertas">{props.greeting} CONOCE NUESTRAS OFERTAS DE LA SEMANA!!</p>
         </div>
 
     )
