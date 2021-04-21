@@ -1,21 +1,17 @@
 import React from 'react';
 import './App.css';
-import NavBar from './components/NavBar'
-import ItemListContainer from './components/ItemListContainer'
-import ItemCountContainer from './containers/ItemCountContainer'
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 
 
 function App() {
   return (
     <div className="App">
-
       <NavBar />
+
       <ItemListContainer greeting="'Hola CLIENTE'" />
-      <div className='caja-contador'>
-        <ItemCountContainer stock="6" />
 
 
-      </div>
     </div>
   );
 

@@ -4,17 +4,23 @@ import ItemCount from './ItemCount'
 
 
 
-export default function ItemListContainer(props) {
+
+export default function ItemListContainer({ greeting, onAdd }) {
+
+    function onAdd() {
+        console.log("Agregado al carrito: ")
+    }
 
     return (
-        <div className="div-ofertas">
-            <p className="texto-ofertas">{props.greeting} CONOCE NUESTRAS OFERTAS DE LA SEMANA!!</p>
+        <div>
+            <div className="div-ofertas">
+                <p className="texto-ofertas">{greeting} CONOCE NUESTRAS OFERTAS DE LA SEMANA!!</p>
 
+
+            </div>
+            <ItemCount stock={6} initial={1} onAdd={onAdd} />
 
         </div>
-
     )
-
-
-
 }
+
