@@ -29,10 +29,8 @@ export default function ItemListContainer({ greeting, onAdd }) {
         <div>
             <div className="div-ofertas">
                 <p className="texto-ofertas">{greeting} CONOCE NUESTRAS OFERTAS DE LA SEMANA!!</p>
-
-
             </div>
-            <ItemCount stock={6} initial={1} onAdd={onAdd} />
+
             <ItemList dataInput={data} />
         </div>
     )

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-export default function ItemCount({ stock, initial, onAdd }) {
+export default function ItemCount({ stock, initial }) {
 
     const [number, setNumber] = useState(initial)
 
@@ -23,14 +23,12 @@ export default function ItemCount({ stock, initial, onAdd }) {
         <div>
 
             <div>
-                <div className="caja-producto"> MESA PARAISO</div>
-
                 <div className="bloque-inferior">
                     <button onClick={restar}>-</button>
                     <div className="caja-numero">{number}</div>
                     <button onClick={sumar}>+</button>
                 </div>
-                <button className="boton-agregar" onClick={onAdd}>Agregar al carrito </button>
+                <button className="boton-agregar" >Agregar al carrito </button>
             </div>
         </div>
 
