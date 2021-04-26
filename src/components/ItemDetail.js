@@ -10,6 +10,8 @@ export default function ItemDetail({ dataDetail }) {
                 <img src={dataDetail.picture} />
             </ul>
 
+            <ItemCount initial={1} stock={3} />
+
 
         </div>
     )
