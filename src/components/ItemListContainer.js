@@ -21,9 +21,7 @@ export default function ItemListContainer({ greeting, onAdd }) {
         .then(response => setData(response))
 
 
-    function onAdd(number) {
-        console.log("Agregar al carrito")
-    }
+
 
     return (
         <div>

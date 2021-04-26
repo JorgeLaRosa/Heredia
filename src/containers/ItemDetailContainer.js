@@ -10,18 +10,13 @@ export default function ItemDetailContainer() {
         setTimeout(() => { resolve(datajson) }, 2000)
     })
 
-        .then(resp => setItems(resp))
+        .then(respuesta => setItems(respuesta.find(obj => { return obj.id = "2" })))
 
-    function selectedItems(obj) {
-        return obj.id === "2"
-    }
 
-    const precio = items.find(selectedItems).price
-    //useEffect(() , [] )
 
     return (
         <div>
-            <ItemDetail dataDetail={precio} />
+            <ItemDetail dataDetail={items} />
         </div>
     )
 }
