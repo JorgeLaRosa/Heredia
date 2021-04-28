@@ -4,34 +4,63 @@
         "title": "Mesa Nordica",
         "descripcion": "Base de Lapacho masizo. Patas de hierro pintadas de negro",
         "price": "5000",
-        "picture": "/img/mesa-ratona.jpg"
+        "picture": "/img/mesa-ratona.jpg",
+        "categoria": "mesa"
     },
     {
         "id": "1",
         "title": "Mesa Vintage",
         "descripcion": "Base de Quebracho colorado. Patas de madera laqueada.",
         "price": "7800",
-        "picture": "/img/mesa-ratona.jpg"
+        "picture": "/img/mesa-ratona.jpg",
+        "categoria": "mesa"
     },
     {
         "id": "2",
         "title": "Sillon Embajador",
         "descripcion": "Sillon un cuerpo de cuero. Terminaciones trabajadas a mano.",
         "price": "12000",
-        "picture": "/img/mesa-ratona.jpg"
+        "picture": "/img/mesa-ratona.jpg",
+        "categoria": "sillon"
     },
     {
         "id": "3",
-        "title": "Revistero Barkley",
+        "title": "Sillon Barkley",
         "descripcion": "Patas de madera y apliques de hierro. Color a definir por al cliente.",
         "price": "8100",
-        "picture": "/img/mesa-ratona.jpg"
+        "picture": "/img/mesa-ratona.jpg",
+        "categoria": "sillon"
     },
     {
         "id": "4",
-        "title": "Escritorio Walsh",
+        "title": "Biblioteca Walsh",
         "descripcion": "Base de Cedro enchapado con tapacanto de aluminio. Cajonera de 50 x 70 cm.",
         "price": "17000",
-        "picture": "/img/mesa-ratona.jpg"
+        "picture": "/img/mesa-ratona.jpg",
+        "categoria": "biblioteca"
+    },
+    {
+        "id": "5",
+        "title": "Biblioteca Casandra",
+        "descripcion": "Base de Cedro enchapado con tapacanto de aluminio. Cajonera de 50 x 70 cm.",
+        "price": "17000",
+        "picture": "/img/mesa-ratona.jpg",
+        "categoria": "biblioteca"
+    },
+    {
+        "id": "6",
+        "title": "Silla Sentadito",
+        "descripcion": "Maravillosa silla para sentarse  enchapado con tapacanto de aluminio.",
+        "price": "17000",
+        "picture": "/img/mesa-ratona.jpg",
+        "categoria": "silla"
+    },
+    {
+        "id": "7",
+        "title": "Biblioteca Guardatuti",
+        "descripcion": "Base de Cedro enchapado con tapacanto de aluminio.",
+        "price": "17000",
+        "picture": "/img/mesa-ratona.jpg",
+        "categoria": "biblioteca"
     }
 ]

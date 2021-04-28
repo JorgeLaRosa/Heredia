@@ -2,6 +2,7 @@ import React from 'react';
 import "./NavBar.css"
 import CartWidget from './CartWidget'
 //import { Divider, Grid } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 
 
 function Menu() {
@@ -27,14 +28,28 @@ function Menu() {
                 <div className="pestanas">
                     <ul className="ul-pestanas">
 
-                        <li className="pestanas">Sillones</li>
-                        <li className="pestanas">Mesas</li>
-                        <li className="pestanas">Bibliotecas</li>
-                        <li className="pestanas">Roperos</li>
-                        <li className="pestanas">Sillas</li>
+                        <li className="pestanas">
+                            <Link to="/">View All</Link>
+                        </li>
+
+                        <li className="pestanas">
+                            <Link to="/sillon">Sillones</Link>
+                        </li>
+
+                        <li className="pestanas">
+                            <Link to="/mesa">Mesas</Link>
+                        </li>
+
+                        <li className="pestanas">
+                            <Link to="/biblioteca">Bibliotecas</Link>
+                        </li>
+
+                        <li className="pestanas">
+                            <Link to="/silla">Sillas</Link>
+                        </li>
+
+
                     </ul>
-
-
                 </div>
             </div>
 

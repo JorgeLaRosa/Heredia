@@ -4,9 +4,6 @@ import ItemCount from './ItemCount'
 import ItemList from './ItemList'
 import datajson from '../Data/Data'
 
-
-
-
 export default function ItemListContainer({ greeting, onAdd }) {
 
     const [data, setData] = useState([])
@@ -15,7 +12,6 @@ export default function ItemListContainer({ greeting, onAdd }) {
         setTimeout(() => {
             resolve(datajson);
         }, 2000)
-
     })
 
         .then(response => setData(response))

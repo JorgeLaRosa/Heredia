@@ -3,17 +3,46 @@ import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './containers/ItemDetailContainer'
+import { BrowserRouter as Router, Route, Switch } from
+  'react-router-dom'
+import HomePageContainer from './containers/HomePage/HomePageContainer'
+import CategoryPageContainer from './containers/SillasPage/CategoryPageContainer'
+import RoperoPageContainer from './containers/RoperoPage/RoperoPageContainer'
+import MesasPageContainer from './containers/MesaPage/MesasPageContainer'
+import SillonesPageContainer from './containers/SillonesPage/SillonesPageContainer'
+import BibliotecaPageContainer from './containers/BibliotecaPage/BibliotecaPageContainer'
 
+// <div className="App">
+//  <ItemListContainer greeting="'Hola CLIENTE'" />
+//< ItemDetailContainer />
+//</div>
 
 function App() {
   return (
-    <div className="App">
+
+    <Router>
       <NavBar />
+      <Switch>
+        <Route exact path="/">
+          <HomePageContainer />
+          <ItemListContainer />
+        </Route>
 
-      <ItemListContainer greeting="'Hola CLIENTE'" />
+        <Route path="/category/:categoria">
+          <CategoryPageContainer />
+        </Route>
 
-      < ItemDetailContainer />
-    </div>
+        <Route path="/product/:productId">
+          <ItemDetailContainer />
+        </Route>
+
+
+
+      </Switch>
+
+    </Router >
+
+
   );
 
 }
