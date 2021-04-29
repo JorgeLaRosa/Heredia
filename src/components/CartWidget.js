@@ -7,7 +7,7 @@ export default function CartWidget() {
     return (
 
         <div>
-            <img src={cart} height="28" width="28" />
+            <img src={cart} height="28" width="28" alt="" />
         </div>
     )
 }

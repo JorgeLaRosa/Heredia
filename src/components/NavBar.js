@@ -1,7 +1,6 @@
 import React from 'react';
 import "./NavBar.css"
 import CartWidget from './CartWidget'
-//import { Divider, Grid } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 
 
@@ -14,7 +13,7 @@ function Menu() {
                 <div className="buscador">
                     <input placeholder="Buscar Producto"></input>
                 </div>
-                <div className="div-logo"></div>
+                <div className="div-logo">Le-Carte</div>
                 <div className="div-usuario">
                     <p className="inicia-sesion-div">Iniciar Sesion</p>
                     <p className="registrarse-div" > Registrarse</p>
@@ -33,27 +32,23 @@ function Menu() {
                         </li>
 
                         <li className="pestanas">
-                            <Link to="/sillon">Sillones</Link>
+                            <Link to="/category/sillon">Sillones</Link>
                         </li>
 
                         <li className="pestanas">
-                            <Link to="/mesa">Mesas</Link>
+                            <Link to="/category/mesa">Mesas</Link>
                         </li>
 
                         <li className="pestanas">
-                            <Link to="/biblioteca">Bibliotecas</Link>
+                            <Link to="/category/biblioteca">Bibliotecas</Link>
                         </li>
 
                         <li className="pestanas">
-                            <Link to="/silla">Sillas</Link>
+                            <Link to="/category/silla">Sillas</Link>
                         </li>
-
-
                     </ul>
                 </div>
             </div>
-
-
         </div>
 
     )

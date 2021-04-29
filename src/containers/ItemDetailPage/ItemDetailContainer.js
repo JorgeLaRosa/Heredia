@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import ItemDetail from '../components/ItemDetail'
-import datajson from '../Data/Data'
+import ItemDetail from '../../components/ItemDetail'
+import datajson from '../../Data/Data'
 import { useParams } from 'react-router-dom'
 
 export default function ItemDetailContainer() {
@@ -15,7 +15,6 @@ export default function ItemDetailContainer() {
         })
 
             .then(respuesta => setItems(respuesta.find(obj => { return obj.id === productId })))
-
 
     }, [productId]);
 

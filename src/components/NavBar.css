@@ -20,9 +20,13 @@
 }  
 
 .div-logo{
-   width: 60px;
+   width: 120px;
    height: 60px;
-   border: 2px solid red;
+   
+   font-size: 28px;
+   font-weight: bold;
+   padding-top:20px;
+   box-sizing: border-box;
    /*background-image: url("../imagenes/Logo1.jpeg"); 
    background-size: 120%;   */
 
