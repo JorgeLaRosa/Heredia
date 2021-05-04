@@ -1,6 +1,6 @@
 import React from 'react'
 import './Item.css'
-import ItemCount from './ItemCount'
+
 import { Link } from 'react-router-dom'
 
 export default function Item({ data }) {
@@ -14,7 +14,7 @@ export default function Item({ data }) {
                     <p>{data.descripcion}</p>
                     <p className="producto-price">Precio: ${data.price}</p>
                 </div>
-                <ItemCount stock={6} initial={1} />
+
             </Link>
         </div>
     )

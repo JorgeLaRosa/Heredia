@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom'
 
 
-export default function ItemCount({ stock, initial }) {
+export default function ItemCount({ stock, initial, onAdd }) {
+
 
     const [number, setNumber] = useState(initial)
 
@@ -19,9 +21,6 @@ export default function ItemCount({ stock, initial }) {
         }
     }
 
-    function onAdd() {
-        console.log("agregar al carrito")
-    }
     return (
         <div>
 
@@ -31,7 +30,8 @@ export default function ItemCount({ stock, initial }) {
                     <div className="caja-numero">{number}</div>
                     <button onClick={sumar}>+</button>
                 </div>
-                <button className="boton-agregar" onClick={onAdd} >Agregar al carrito </button>
+                <button className="boton-agregar" onClick={() => onAdd(number)} >Agregar al carrito </button>
+
             </div>
         </div>
 
