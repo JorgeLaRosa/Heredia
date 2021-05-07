@@ -1,44 +1,19 @@
 import React from 'react';
-import './App.css';
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from './containers/ItemDetailPage/ItemDetailContainer'
-import { BrowserRouter as Router, Route, Switch } from
-  'react-router-dom'
-import HomePageContainer from './containers/HomePage/HomePageContainer'
-import CategoryPageContainer from './containers/CategoryPage/CategoryPageContainer'
-import Cart from './components/Cart'
-
-//<div className="App">
-//<ItemListContainer greeting="'Hola CLIENTE'" />
-//< ItemDetailContainer />
-//</div>
+import AppRouter from './AppRouter';
+import CartContextProvider from './context/CartContext'
 
 function App() {
   return (
-    <Router>
-      <NavBar />
-      <Switch>
+    <div>
 
-        <Route exact path="/">
-          <HomePageContainer />
-          <ItemListContainer />
-        </Route>
+      <CartContextProvider>
+        < AppRouter />
+      </CartContextProvider>
 
-        <Route path="/category/:categoria">
-          <CategoryPageContainer />
-        </Route>
+    </div>
 
-        <Route path="/product/:productId">
-          <ItemDetailContainer />
-        </Route>
 
-        <Route path='/cart'>
-          <Cart />
-        </Route>
 
-      </Switch>
-    </Router >
   );
 
 }

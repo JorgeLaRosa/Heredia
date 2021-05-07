@@ -1,22 +1,31 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import ItemCount from './ItemCount'
 import './ItemDetail.css'
 import { useHistory } from 'react-router-dom'
+import CartContext from '../context/CartContext'
+
 
 
 
 export default function ItemDetail({ dataDetail }) {
+
+
     const history = useHistory();
-    const [cantidad, setCantidad] = useState(0);
+    const [cantidad, setCantidad] = useState("");
     const [displayOneValue, setDisplayOneValue] = useState("block");
     const [displayTwoValue, setDisplayTwoValue] = useState("none")
+    const { setPrueba } = useContext(CartContext);
 
     function onAdd(number) {
         setDisplayOneValue("none")
         setDisplayTwoValue("block")
         setCantidad(number)
+        setPrueba("tutu");
 
     }
+
+
+
 
     return (
         <div className="detalle-plantilla">

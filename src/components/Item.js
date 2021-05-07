@@ -1,9 +1,10 @@
 import React from 'react'
 import './Item.css'
-
 import { Link } from 'react-router-dom'
 
+
 export default function Item({ data }) {
+
     return (
         <div className="plantilla-producto" >
             <Link to={`/product/${data.id}`}>
@@ -13,6 +14,8 @@ export default function Item({ data }) {
                     <p> Codigo: {data.id}</p>
                     <p>{data.descripcion}</p>
                     <p className="producto-price">Precio: ${data.price}</p>
+
+
                 </div>
 
             </Link>
