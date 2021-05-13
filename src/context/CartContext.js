@@ -4,55 +4,53 @@ export const CartContext = createContext();
 
 export default function CartContextProvider({ children }) {
 
-    const [newOrder, setNewOrder] = useState([])
-    const [order, setOrder] = useState([])
+    //const [newOrder, setNewOrder] = useState([]);
+    const [cart, setCart] = useState([]);
 
-    useEffect((order, newOrder) => {
-        const check = (order, newOrder) => {
-            if (order.some((i) => i.id == newOrder[0].id)) {
-                console.log("dos gotas de agua")
-                //Si Está, Mapeo order y le agrego cantidad actual
-
-            } else {
-                //setOrder([{ id: newId, Quantity: newQuantity }])
-                console.log("Se carga ORDER")
-
-            }
+    function isInCart({ id, quantity, title, price }) {
+        if (cart.some(i => Number(i.id) === id)) {
+            refreshCart({ id, quantity, title, price })
+        } else {
+            addCart({ id, quantity, title, price })
         }
-    }, [newOrder])
+    }
 
 
+    function addCart({ id, quantity, title, price }) {
+        setCart([...cart, { id, quantity, title, price }])
 
-    //                 order.map((e) => {
+    }
 
-    //                     if (e.id == newId) {
-    //                         return (
-    //                             e.cantidad = e.cantidad + newOrder.cantidad,
-    //                             //setOrder({ id: e.id, cantidad: e.cantidad }),
-    //                             console.log(`la nueva cant:  ${e.cantidad}`)
-    //                         )
-    //                     }
-    //                 })
+    function refreshCart({ id, quantity, title, price }) {
 
-    //         } else {
-    //             return (
-    //                 setOrder({ id: newOrder.id, cantidad: newOrder.cantidad })
-    //             )
-    //         }
-    //}//llave de check
+        cart.map(i => {
+            if (i.id === id) {
+                return (
+                    i.quantity = i.quantity + quantity
+                )
+            }
+        })//fin del map
 
+        setCart([...cart])
+    }//fin de refresh
+
+    console.log(cart)
 
 
+    function remove({ id }) {
 
-    function remove() {
+        setCart(
+            cart.filter(i => i.id !== id)
+        )
     }
 
     function clear() {
-        setOrder([])
+        setCart([])
+        console.log(cart)
     }
 
     return (
-        <CartContext.Provider value={{ setNewOrder }}  >
+        <CartContext.Provider value={{ isInCart, clear, remove, cart }}  >
             {children}
         </CartContext.Provider>
     )

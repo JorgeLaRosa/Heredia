@@ -5,8 +5,6 @@ import { useHistory } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
 
 
-
-
 export default function ItemDetail({ dataDetail }) {
 
 
@@ -14,13 +12,17 @@ export default function ItemDetail({ dataDetail }) {
     const [cantidad, setCantidad] = useState(0);
     const [displayOneValue, setDisplayOneValue] = useState("block");
     const [displayTwoValue, setDisplayTwoValue] = useState("none")
-    const { setNewOrder } = useContext(CartContext);
+    const { isInCart } = useContext(CartContext);
 
     function onAdd(number) {
         setDisplayOneValue("none")
         setDisplayTwoValue("block")
         setCantidad(number)
-        setNewOrder([{ id: dataDetail.id, cantidad: number }]);
+        var id = dataDetail.id
+        var quantity = number
+        var title = dataDetail.title
+        var price = dataDetail.price
+        isInCart({ id, quantity, title, price });
 
     }
 
