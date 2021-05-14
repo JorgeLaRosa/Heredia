@@ -6,9 +6,11 @@ export default function CartContextProvider({ children }) {
 
     //const [newOrder, setNewOrder] = useState([]);
     const [cart, setCart] = useState([]);
+    const [finalQty, setFinalQty] = useState(0);
+    const [finalPrice, setFinalPrice] = useState(0)
 
     function isInCart({ id, quantity, title, price }) {
-        if (cart.some(i => Number(i.id) === id)) {
+        if (cart.some(i => Number(i.id) == Number(id))) {
             refreshCart({ id, quantity, title, price })
         } else {
             addCart({ id, quantity, title, price })
@@ -17,6 +19,7 @@ export default function CartContextProvider({ children }) {
 
 
     function addCart({ id, quantity, title, price }) {
+        price = price * quantity
         setCart([...cart, { id, quantity, title, price }])
 
     }
@@ -30,17 +33,17 @@ export default function CartContextProvider({ children }) {
                 )
             }
         })//fin del map
-
         setCart([...cart])
     }//fin de refresh
 
     console.log(cart)
 
 
-    function remove({ id }) {
-
+    function remove(id) {
+        console.log("BORRANDO")
+        console.log(id)
         setCart(
-            cart.filter(i => i.id !== id)
+            cart.filter((i) => i.id !== id)
         )
     }
 
@@ -49,8 +52,22 @@ export default function CartContextProvider({ children }) {
         console.log(cart)
     }
 
+    useEffect(() => {
+        let finalQty = 0
+        let finalPrice = 0
+        cart.forEach(e => {
+            finalQty = finalQty + e.quantity
+            finalPrice = finalPrice + e.price
+        })
+        setFinalQty(finalQty)
+        setFinalPrice(finalPrice)
+
+    }, [cart])
+    console.log(finalQty)
+
+
     return (
-        <CartContext.Provider value={{ isInCart, clear, remove, cart }}  >
+        <CartContext.Provider value={{ isInCart, clear, remove, cart, finalQty, finalPrice }}  >
             {children}
         </CartContext.Provider>
     )
