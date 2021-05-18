@@ -7,11 +7,11 @@ export default function Item({ data }) {
 
     return (
         <div className="plantilla-producto" >
-            <Link to={`/product/${data.id}`}>
+            <Link to={`/product/${data.productId}`}>
                 <h3 className="producto-title">{data.title}</h3>
-                <img src={data.picture} className="picture" alt="" />
+                <img src={data.image} className="picture" alt="" />
                 <div classname="detalle-div">
-                    <p> Codigo: {data.id}</p>
+                    <p> Codigo: {data.productId}</p>
                     <p>{data.descripcion}</p>
                     <p className="producto-price">Precio: ${data.price}</p>
 

@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import './ItemListContainer.css'
 import ItemList from './ItemList'
-import datajson from '../Data/Data'
+//import datajson from '../Data/Data'
+import { getProducts } from '../services/postService'
 
 export default function ItemListContainer({ greeting, onAdd }) {
 
     const [data, setData] = useState([])
 
     useEffect(() => {
-        new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(datajson);
-            }, 2000)
-        })
-            .then(response => setData(response))
+        getProducts()
+            .then(result => setData(result))
     }, [])
+
 
     return (
         <div>

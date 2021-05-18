@@ -18,7 +18,7 @@ export default function ItemDetail({ dataDetail }) {
         setDisplayOneValue("none")
         setDisplayTwoValue("block")
         setCantidad(number)
-        var id = dataDetail.id
+        var id = dataDetail.productId
         var quantity = number
         var title = dataDetail.title
         var price = dataDetail.price

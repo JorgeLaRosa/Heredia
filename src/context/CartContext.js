@@ -10,13 +10,16 @@ export default function CartContextProvider({ children }) {
     const [finalPrice, setFinalPrice] = useState(0)
 
     function isInCart({ id, quantity, title, price }) {
-        if (cart.some(i => Number(i.id) == Number(id))) {
+        if (cart.some(i => i.id == id)) {
+            console.log(id)
+            //console.log(i.id)
             refreshCart({ id, quantity, title, price })
         } else {
             addCart({ id, quantity, title, price })
         }
     }
 
+    console.log(cart)
 
     function addCart({ id, quantity, title, price }) {
         price = price * quantity
@@ -36,7 +39,7 @@ export default function CartContextProvider({ children }) {
         setCart([...cart])
     }//fin de refresh
 
-    console.log(cart)
+
 
 
     function remove(id) {
