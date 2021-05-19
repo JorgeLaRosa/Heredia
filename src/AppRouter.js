@@ -22,7 +22,7 @@ function AppRouter() {
                     <ItemListContainer />
                 </Route>
 
-                <Route path="/category/:categoria">
+                <Route path="/category/:category">
                     <CategoryPageContainer />
                 </Route>
 

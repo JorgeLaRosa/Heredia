@@ -12,9 +12,17 @@ export function getProducts() {
 }
 
 export function getProductsById(id) {
-    console.log("El valor que llega de params")
-    console.log(id)
+
     return itemCollection.where("productId", "==", parseInt(id))
+        .get()
+        .then(snapshot => {
+            return snapshot.docs.map(doc => doc.data())
+        })
+
+}
+
+export function getProductsByCategory(category) {
+    return itemCollection.where("category", "==", category)
         .get()
         .then(snapshot => {
             return snapshot.docs.map(doc => doc.data())
