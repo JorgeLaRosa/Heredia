@@ -1,7 +1,7 @@
-
 import db from '../firebase'
 
 const itemCollection = db.collection('productos')
+const orderCollection = db.collection('orders')
 
 export function getProducts() {
     return itemCollection
@@ -27,6 +27,23 @@ export function getProductsByCategory(category) {
         .then(snapshot => {
             return snapshot.docs.map(doc => doc.data())
         })
-
 }
+
+export function createOrder(newOrder) {
+
+    return (
+        orderCollection
+            .add(newOrder)
+            .then(function (i) {
+                return (i.id)
+            })
+
+    )
+    //     .catch(function (error) {
+    //         console.log("ERROR con tocket", error)
+    //     })
+}
+
+
+
 

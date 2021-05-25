@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 
 export default function CartWidget() {
-    const { finalQty } = useContext(CartContext)
+    const { totalQty } = useContext(CartContext)
 
 
 
@@ -15,7 +15,7 @@ export default function CartWidget() {
 
             <Link to={'/cart'}>
                 <img src={cart} height="28" width="28" alt="" />
-                {finalQty < 1 ? <p></p> : <p>{finalQty}</p>}
+                {totalQty < 1 ? <p></p> : <p>{totalQty}</p>}
             </Link>
 
         </div>

@@ -28,8 +28,8 @@ export default function ItemDetail({ dataDetail }) {
 
     return (
         <div className="detalle-plantilla">
-            <h5 className="titulo-seleccion">El producto que Seleccionado es: {dataDetail.title}</h5>
-            <img src={dataDetail.picture} alt="" className="foto-detalle" />
+            <h3 className="titulo-seleccion">{dataDetail.title}</h3>
+            <img src={dataDetail.image} alt="" className="foto-detalle" />
             <ul>
 
                 <li className="detalle-precio"> Precio: ${dataDetail.price} </li>
@@ -41,7 +41,7 @@ export default function ItemDetail({ dataDetail }) {
             </div>
             <div style={{ display: displayTwoValue }}>
                 <h5>Seguro deseas comprar {cantidad} producto/s</h5>
-                <button onClick={() => history.push('/cart')}>Finalizar mi compra</button>
+                <button onClick={() => history.push('/cart')}>Proceder a la compra</button>
             </div>
 
 

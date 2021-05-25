@@ -11,21 +11,14 @@ export default function CategoryPageContainer() {
     const [categoryItems, setCategoryItems] = useState([]);
 
     useEffect(() => {
-
         getProductsByCategory(category)
             .then(i => setCategoryItems(i))
-        // new Promise((resolve, reject) => {
-        //     setTimeout(() => {
-        //         resolve(datajson)
-        //     }, 2000)
-        // })
 
-        //     .then(resp => setCategory(resp.filter(filtro => { return filtro.categoria === categoria })))
     }, [category]);
 
     return (
         <div>
-            HOLA! Categoria seleccionada: {category}
+            <h4>Categoria seleccionada: {category} </h4>
             <ItemList dataInput={categoryItems} />
         </div>
     )

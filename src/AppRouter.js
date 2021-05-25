@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from
 import HomePageContainer from './containers/HomePage/HomePageContainer'
 import CategoryPageContainer from './containers/CategoryPage/CategoryPageContainer'
 import CartContainer from './containers/cartContainer/CartContainer'
-//import Cart from './components/Cart'
+import Order from './components/Order'
 
 
 function AppRouter() {
@@ -32,6 +32,10 @@ function AppRouter() {
 
                 <Route path='/cart'>
                     <CartContainer />
+                </Route>
+
+                <Route path='/order'>
+                    <Order />
                 </Route>
 
             </Switch>

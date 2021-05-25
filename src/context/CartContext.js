@@ -6,20 +6,20 @@ export default function CartContextProvider({ children }) {
 
     //const [newOrder, setNewOrder] = useState([]);
     const [cart, setCart] = useState([]);
-    const [finalQty, setFinalQty] = useState(0);
-    const [finalPrice, setFinalPrice] = useState(0)
+    const [totalQty, setTotalQty] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(0)
+    //const [newOrder, setNewOrder] = useState([])
 
-    function isInCart({ id, quantity, title, price }) {
+    function isInCart({ id, quantity, title, price }) { //Acá me llega info para agregar a Cart.
         if (cart.some(i => i.id == id)) {
-            console.log(id)
-            //console.log(i.id)
+            console.log(id)//check debug
             refreshCart({ id, quantity, title, price })
         } else {
             addCart({ id, quantity, title, price })
         }
     }
 
-    console.log(cart)
+    console.log("El cart es: ", cart)
 
     function addCart({ id, quantity, title, price }) {
         price = price * quantity
@@ -28,19 +28,16 @@ export default function CartContextProvider({ children }) {
     }
 
     function refreshCart({ id, quantity, title, price }) {
-
         cart.map(i => {
             if (i.id === id) {
                 return (
-                    i.quantity = i.quantity + quantity
+                    i.quantity = i.quantity + quantity,
+                    i.price = i.quantity * price
                 )
             }
         })//fin del map
         setCart([...cart])
     }//fin de refresh
-
-
-
 
     function remove(id) {
         console.log("BORRANDO")
@@ -56,21 +53,21 @@ export default function CartContextProvider({ children }) {
     }
 
     useEffect(() => {
-        let finalQty = 0
-        let finalPrice = 0
+        let totalAmountProducts = 0
+        let totalPrice = 0
         cart.forEach(e => {
-            finalQty = finalQty + e.quantity
-            finalPrice = finalPrice + e.price
+            totalAmountProducts = totalAmountProducts + e.quantity
+            totalPrice = totalPrice + e.price
         })
-        setFinalQty(finalQty)
-        setFinalPrice(finalPrice)
-
+        setTotalQty(totalAmountProducts)
+        setTotalPrice(totalPrice)
+        console.log("TOTAL QTY: ", totalQty)
     }, [cart])
-    console.log(finalQty)
+
 
 
     return (
-        <CartContext.Provider value={{ isInCart, clear, remove, cart, finalQty, finalPrice }}  >
+        <CartContext.Provider value={{ isInCart, clear, remove, cart, totalQty, totalPrice }}  >
             {children}
         </CartContext.Provider>
     )
