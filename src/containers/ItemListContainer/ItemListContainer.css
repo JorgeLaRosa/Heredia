@@ -1,0 +1,34 @@
+.div-ofertas{
+    border: 1px solid black;
+    height: 300px;
+    background-image: url('../../imagenes/backImage-ofertas.jpg');   
+    background-size: 110%;
+    /* background-position: 50px -70px; */
+    background-repeat: no-repeat;
+    margin-bottom: 40px;
+}
+
+.texto-ofertas{
+    width: 80%;    
+    font-size: 40px;    
+    color: rgb(226, 226, 226);
+    font-weight: bolder;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.caja-producto{
+    height:150px;
+    width:150px;
+    border: 2px solid black;
+    font-size: 35px;
+}
+
+.catalogueTitle{
+    font-size: 60px;
+    margin-left: 50px;
+}
+

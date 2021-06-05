@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import datajson from '../../Data/Data'
-import ItemList from '../../components/ItemList'
+import ItemList from '../../components/ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 import { getProductsByCategory } from '../../services/postService'
+import './CategoryPageContainer.css'
 
 
 export default function CategoryPageContainer() {
@@ -18,7 +19,7 @@ export default function CategoryPageContainer() {
 
     return (
         <div>
-            <h4>Categoria seleccionada: {category} </h4>
+            <h4 className="categoryTitle" >Categoria seleccionada: {category} </h4>
             <ItemList dataInput={categoryItems} />
         </div>
     )

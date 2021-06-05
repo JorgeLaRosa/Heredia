@@ -1,0 +1,60 @@
+.orderForm{
+    width: 300px;
+    height: 250px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    -webkit-box-shadow: -6px 8px 6px -5px rgba(0,0,0,0.68); 
+    box-shadow: -6px 8px 6px -5px rgba(0,0,0,0.68);
+    
+}
+
+.lineOne{
+    margin-left: 100px;
+    margin-bottom: 10px;
+    font-size: 50px;    
+}
+
+.lineTwo{
+    font-size: 30px;
+    margin-left: 100px;
+    margin-top: 0;
+}
+
+.orderInput{
+    margin: 10px 20px 10px 20px;
+    width: 80%;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 4px;
+    
+}
+
+.ticketDiv{
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 350px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+}
+
+.ticketTitle{
+    margin-left: 20px;
+}
+
+.ticketIdTitle{
+    margin-left: 20px;
+}
+
+.ticketId{
+    margin-left: 20%;
+    font-size:20px;
+    font-weight: bold;
+    
+}
+

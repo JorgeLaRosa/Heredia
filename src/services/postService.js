@@ -1,5 +1,6 @@
 import db from '../firebase'
 
+
 const itemCollection = db.collection('productos')
 const orderCollection = db.collection('orders')
 
@@ -31,17 +32,16 @@ export function getProductsByCategory(category) {
 
 export function createOrder(newOrder) {
 
+
+
+
     return (
         orderCollection
-            .add(newOrder)
+            .add({ newOrder })
             .then(function (i) {
                 return (i.id)
             })
-
     )
-    //     .catch(function (error) {
-    //         console.log("ERROR con tocket", error)
-    //     })
 }
 
 

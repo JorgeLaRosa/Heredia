@@ -10,38 +10,33 @@ export default function CartContextProvider({ children }) {
     const [totalPrice, setTotalPrice] = useState(0)
     //const [newOrder, setNewOrder] = useState([])
 
-    function isInCart({ id, quantity, title, price }) { //Acá me llega info para agregar a Cart.
+    function isInCart({ id, quantity, title, price, image }) { //Acá me llega info para agregar a Cart.
         if (cart.some(i => i.id == id)) {
-            console.log(id)//check debug
-            refreshCart({ id, quantity, title, price })
+            uploadCart({ id, quantity, title, price, image })
         } else {
-            addCart({ id, quantity, title, price })
+            addCart({ id, quantity, title, price, image })
         }
     }
 
-    console.log("El cart es: ", cart)
-
-    function addCart({ id, quantity, title, price }) {
-        price = price * quantity
-        setCart([...cart, { id, quantity, title, price }])
+    function addCart({ id, quantity, title, price, image }) {
+        const finalPrice = price * quantity
+        setCart([...cart, { id, quantity, title, price, image, finalPrice }])
 
     }
 
-    function refreshCart({ id, quantity, title, price }) {
+    function uploadCart({ id, quantity, price }) {
         cart.map(i => {
             if (i.id === id) {
                 return (
                     i.quantity = i.quantity + quantity,
-                    i.price = i.quantity * price
+                    i.finalPrice = i.quantity * price
                 )
             }
         })//fin del map
         setCart([...cart])
-    }//fin de refresh
+    }//fin de upload
 
     function remove(id) {
-        console.log("BORRANDO")
-        console.log(id)
         setCart(
             cart.filter((i) => i.id !== id)
         )
@@ -49,7 +44,6 @@ export default function CartContextProvider({ children }) {
 
     function clear() {
         setCart([])
-        console.log(cart)
     }
 
     useEffect(() => {
@@ -57,7 +51,7 @@ export default function CartContextProvider({ children }) {
         let totalPrice = 0
         cart.forEach(e => {
             totalAmountProducts = totalAmountProducts + e.quantity
-            totalPrice = totalPrice + e.price
+            totalPrice = totalPrice + e.finalPrice
         })
         setTotalQty(totalAmountProducts)
         setTotalPrice(totalPrice)

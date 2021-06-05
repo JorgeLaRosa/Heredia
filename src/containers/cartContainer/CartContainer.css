@@ -1,0 +1,55 @@
+.cartPageTitle{
+    margin-left: 50px;
+    font-size: 40px;
+    margin-top: 50px;
+    
+}
+
+.totalCart{
+    font-size: 23px;
+    margin-left: 60%;
+    
+}
+
+.payButton{
+    display: block;
+    margin: 10px 20px 0 25%;
+    background-color: rgb(226, 226, 226);
+    border-radius: 5px;
+    width: 50%;  
+    height: 35px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.clearButton{
+    display: block;
+    margin: 0 0 0 25%;
+    background-color: rgb(226, 226, 226);
+    border-radius: 5px;
+    width: 50%;  
+    height: 35px;
+    font-size: 15px;
+   
+}
+
+.keepBuyingButton{
+    display: block;
+    margin: 10px 0 0 25%;
+    background-color: rgb(226, 226, 226);
+    border-radius: 5px;
+    width: 50%;  
+    height: 35px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.ulCartList{
+    margin-left: 0px;
+    padding-left: 0;
+}
+
+.lineTwoCart{
+    margin-left: 50px;
+    font-size: 25px;
+}

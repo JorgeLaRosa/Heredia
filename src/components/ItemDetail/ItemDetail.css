@@ -1,0 +1,76 @@
+.detalle-plantilla{
+    height: 350px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+ul li{
+    text-decoration: none;
+    list-style-type: none;
+    margin-bottom: 10px;
+
+}
+
+.titulo-seleccion{
+    margin-left: 50px;
+    font-size:40px;
+    font-weight:bold;
+}
+
+.foto-detalle{
+    
+    float: left;
+    width: 200px;
+    margin-right: 50px;
+    margin-left: 30px;
+}
+
+.detalle-precio{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.counterBox{
+    height: 120px;
+    width: 170px;
+    
+    display: inline-block;
+}
+
+.bloque-inferior{
+    margin-top: 0px;    
+}
+.buyButton{
+    background-color: rgb(226, 226, 226);
+    border-radius: 5px;
+    width: 200px;  
+    height: 35px;
+    margin-right: 10px;
+    font-size: 15px;
+
+}
+.caja-numero{
+    display: inline-block;
+    margin: 10px;
+    
+}
+
+.bloque-inferior{
+    width: 150px;
+    margin-left: 0px;
+}
+
+.boton-agregar{
+    margin: 5px 0 0 0;
+    background-color: rgb(226, 226, 226);
+    border-radius: 5px;
+    width: 200px;  
+    height: 35px;
+    font-size: 15px;
+
+}
+
+.counterBox{
+    width: 200px;
+}

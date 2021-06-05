@@ -1,40 +1,31 @@
 import React, { useContext, useState } from 'react'
-import CartList from '../../components/CartList'
+import CartList from '../../components/cartList/CartList'
 import { CartContext } from '../../context/CartContext'
 import { useHistory } from 'react-router-dom'
-import { createOrder } from '../../services/postService'
-import Order from '../../components/Order'
-
-
+import './CartContainer.css'
 
 export default function CartContainer() {
     const history = useHistory()
     const { totalQty, totalPrice, clear } = useContext(CartContext)
 
-
     return (
         <div>
-            <h1>Carro de Compras</h1>
-            <div>
-                {totalQty < 1 ? (
-                    <div>
-                        <h3>No hay productos seleccionados en su carro</h3>
-                    </div>
-                ) : (
-                    <div>
-                        <CartList />
-                        <h5>Cantidad Items: {totalQty}. Total ${totalPrice}</h5>
-                        <button onClick={() => clear()}> Vaciar Carrito </button>
-                        <button onClick={() => history.push('/order')}>PAGAR</button>
-                    </div>
-                )}
+            <h1 className="cartPageTitle">Carro de Compras</h1>
+            <>
+                {totalQty < 1 ?
+                    (
+                        <p className="lineTwoCart">No hay productos seleccionados en su carro</p>
 
-            </div>
-            <button onClick={() => history.push('/')}>Seguir Comprando</button>
-
-
-
-
+                    ) : (
+                        <>
+                            <CartList />
+                            <h5 className="totalCart">Cantidad Items: {totalQty}. Total ${totalPrice}</h5>
+                            <button className="clearButton" onClick={() => clear()}> Vaciar Carrito </button>
+                            <button className="payButton" onClick={() => history.push('/order')}>PAGAR</button>
+                        </>
+                    )}
+            </>
+            <button className="keepBuyingButton" onClick={() => history.push('/')}>Seguir Comprando</button>
         </div>
     )
 }

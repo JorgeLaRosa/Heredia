@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./NavBar.css"
-import CartWidget from './CartWidget'
+import CartWidget from '../cartWidget/CartWidget'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../../context/CartContext'
 
 
 function Menu() {
+
+    const { totalQty } = useContext(CartContext)
 
     return (
 
@@ -18,7 +21,9 @@ function Menu() {
                     <p className="inicia-sesion-div">Iniciar Sesion</p>
                     <p className="registrarse-div" > Registrarse</p>
                     <div className="div-carrito">
+
                         <CartWidget />
+                        {totalQty < 1 ? <p></p> : <p className="pCart">{totalQty}</p>}
                     </div>
                 </div>
 

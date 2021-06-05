@@ -1,0 +1,20 @@
+import React from 'react'
+import './Item.css'
+import { Link } from 'react-router-dom'
+
+
+export default function Item({ data }) {
+
+    return (
+        <div className="plantilla-producto" >
+            <Link to={`/product/${data.productId}`}>
+
+                <h3 className="producto-title">{data.title}</h3>
+
+                <img src={data.image} className="picture" alt="" />
+
+                <p className="producto-price">Precio: ${data.price}</p>
+            </Link>
+        </div>
+    )
+}

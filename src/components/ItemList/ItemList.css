@@ -1,0 +1,10 @@
+.catalogueUlBox{
+    width: 100%;
+    height: auto;
+    padding-left: 0;   
+    display: flex;
+    flex-direction: wrap; 
+    flex-wrap: wrap;  
+    justify-content: space-around;
+}
+
