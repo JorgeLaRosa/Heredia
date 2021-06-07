@@ -21,12 +21,12 @@ export default function ItemCount({ stock, initial, onAdd }) {
     return (
 
         <div className="counterBox">
-            <div className="bloque-inferior">
+            <div className="lower-block">
                 <button onClick={restar}>-</button>
-                <div className="caja-numero">{number}</div>
+                <div className="box-number">{number}</div>
                 <button onClick={sumar}>+</button>
             </div>
-            <button className="boton-agregar" onClick={() => onAdd(number)} >Agregar al carrito </button>
+            <button className="add-button" onClick={() => onAdd(number)} >Agregar al carrito </button>
         </div>
     )
 }

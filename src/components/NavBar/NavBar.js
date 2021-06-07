@@ -10,17 +10,16 @@ function Menu() {
     const { totalQty } = useContext(CartContext)
 
     return (
-
         <div className="nav-gral">
-            <div className="nav-superior">
-                <div className="buscador">
+            <div className="nav-upper">
+                <div className="searcher">
                     <input placeholder="Buscar Producto"></input>
                 </div>
                 <div className="div-logo">Le-Carte</div>
-                <div className="div-usuario">
-                    <p className="inicia-sesion-div">Iniciar Sesion</p>
-                    <p className="registrarse-div" > Registrarse</p>
-                    <div className="div-carrito">
+                <div className="div-user">
+                    <p className="session-div">Iniciar Sesion</p>
+                    <p className="login-div" > Registrarse</p>
+                    <div className="div-cart">
 
                         <CartWidget />
                         {totalQty < 1 ? <p></p> : <p className="pCart">{totalQty}</p>}
@@ -28,7 +27,7 @@ function Menu() {
                 </div>
 
             </div>
-            <div className="nav-inferior">
+            <div className="nav-lower">
                 <div className="pestanas">
                     <ul className="ul-pestanas">
 

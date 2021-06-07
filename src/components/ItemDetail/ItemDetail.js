@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 import { useHistory } from 'react-router-dom'
@@ -26,18 +26,18 @@ export default function ItemDetail({ dataDetail }) {
 
 
     return (
-        <div className="detalle-plantilla">
-            <h3 className="titulo-seleccion">{dataDetail.title}</h3>
+        <div className="card-detail">
+            <h3 className="title-selection">{dataDetail.title}</h3>
 
-            <img src={dataDetail.image} alt="" className="foto-detalle" />
+            <img src={dataDetail.image} alt="" className="picture-detail" />
 
             <ul>
                 <li>Descripción: {dataDetail.description} </li>
                 <li>Envio: Podes convenir el envio o retiro en tienda luego de efectuar tu compra.</li>
-                <li className="detalle-precio"> Precio: ${dataDetail.price} </li>
+                <li className="price-detail"> Precio: ${dataDetail.price} </li>
             </ul>
 
-            <> { displayOneValue == true ?
+            <> { displayOneValue === true ?
                 (
                     <div className="counterBox">
                         <ItemCount initial={1} stock={dataDetail.stock} onAdd={onAdd} />

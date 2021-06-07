@@ -1,5 +1,5 @@
-.detalle-plantilla{
-    height: 350px;
+.card-detail{
+    height: 390px;
     width: 100%;
     border: 1px solid black;
     border-radius: 5px;
@@ -9,24 +9,23 @@ ul li{
     text-decoration: none;
     list-style-type: none;
     margin-bottom: 10px;
-
 }
 
-.titulo-seleccion{
+.title-selection{
     margin-left: 50px;
     font-size:40px;
     font-weight:bold;
 }
 
-.foto-detalle{
-    
+.picture-detail{
     float: left;
     width: 200px;
     margin-right: 50px;
-    margin-left: 30px;
+    margin-left: 50px;
+    border: 1px solid black;
 }
 
-.detalle-precio{
+.price-detail{
     font-size: 18px;
     font-weight: bold;
 }
@@ -50,18 +49,18 @@ ul li{
     font-size: 15px;
 
 }
-.caja-numero{
+.box-number{
     display: inline-block;
     margin: 10px;
     
 }
 
-.bloque-inferior{
+.lower-block{
     width: 150px;
     margin-left: 0px;
 }
 
-.boton-agregar{
+.add-button{
     margin: 5px 0 0 0;
     background-color: rgb(226, 226, 226);
     border-radius: 5px;

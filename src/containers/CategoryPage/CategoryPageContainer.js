@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import datajson from '../../Data/Data'
 import ItemList from '../../components/ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 import { getProductsByCategory } from '../../services/postService'

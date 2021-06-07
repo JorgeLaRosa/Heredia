@@ -1,17 +1,14 @@
 import { useState, useEffect, createContext } from 'react';
-
 export const CartContext = createContext();
 
 export default function CartContextProvider({ children }) {
 
-    //const [newOrder, setNewOrder] = useState([]);
     const [cart, setCart] = useState([]);
     const [totalQty, setTotalQty] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0)
-    //const [newOrder, setNewOrder] = useState([])
 
     function isInCart({ id, quantity, title, price, image }) { //Acá me llega info para agregar a Cart.
-        if (cart.some(i => i.id == id)) {
+        if (cart.some(i => i.id === id)) {
             uploadCart({ id, quantity, title, price, image })
         } else {
             addCart({ id, quantity, title, price, image })
@@ -21,7 +18,6 @@ export default function CartContextProvider({ children }) {
     function addCart({ id, quantity, title, price, image }) {
         const finalPrice = price * quantity
         setCart([...cart, { id, quantity, title, price, image, finalPrice }])
-
     }
 
     function uploadCart({ id, quantity, price }) {
@@ -55,10 +51,7 @@ export default function CartContextProvider({ children }) {
         })
         setTotalQty(totalAmountProducts)
         setTotalPrice(totalPrice)
-        console.log("TOTAL QTY: ", totalQty)
     }, [cart])
-
-
 
     return (
         <CartContext.Provider value={{ isInCart, clear, remove, cart, totalQty, totalPrice }}  >

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import CartList from '../../components/cartList/CartList'
 import { CartContext } from '../../context/CartContext'
 import { useHistory } from 'react-router-dom'

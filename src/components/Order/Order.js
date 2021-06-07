@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { createOrder } from '../../services/postService'
 import { useHistory } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
@@ -17,18 +17,15 @@ export default function Order() {
     const [display, setDisplay] = useState(false);
     const date = firebase.firestore.Timestamp.fromDate(new Date());
 
-
     function nameChange(i) {
         setName(i.target.value)
     }
     function phoneChange(i) {
         setPhone(i.target.value)
     }
-
     function mailChange(i) {
         setMail(i.target.value)
     }
-
     function checkOut() {
 
         const newOrder = {
@@ -49,7 +46,7 @@ export default function Order() {
     }
 
     return (
-        <> {display == false ? (
+        <> {display === false ? (
             <>
                 <h2 className="lineOne">Ya casi!!</h2>
                 <p className="lineTwo">Solo falta completar los siguientes campos.</p>

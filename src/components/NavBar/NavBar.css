@@ -6,7 +6,7 @@
     
 }
 
-.nav-superior{
+.nav-upper{
     width: 100%;
     height:75px;
     
@@ -15,7 +15,7 @@
     justify-content: space-between;
 
 }
-.buscador{
+.searcher{
     margin-top: 30px;
     margin-left: 35px;
     border-radius: 5px;
@@ -34,7 +34,7 @@
 
 }
 
-.div-usuario{
+.div-user{
     width: 260px;
     height: 30px;
     margin-top: 30px;
@@ -42,20 +42,18 @@
     font-size: 13px;
     display: inline-flex;
 }
-.inicia-sesion-div{
+.session-div{
     border-right: 1px solid black;
     margin: 0;
     
     padding: 5px;
     
 }
-.registrarse-div{
+.login-div{
     margin:0;
-    padding: 5px;
-    
+    padding: 5px;    
 }
-.div-carrito{
-   
+.div-cart{
     height:30px;
     width:45px;
     margin-right: 10px;
@@ -73,26 +71,12 @@
     padding: 0;
     box-sizing: border-box;
     font-weight: bold;
-
 }
-
-/*
-.buscador{
-    display: inline-block; 
-    
-}
-.div-logo{
-    display:inline-block;
-
-}
-*/
-.nav-inferior{
+.nav-lower{
     height: 45px;
-
 }  
 
-.ul-pestanas{
-    
+.ul-pestanas{   
     width: 80%;
     margin-top: 0;
     margin-bottom: 0;
@@ -109,13 +93,11 @@ a{
     text-decoration: none;
     color:black;
 }
-
 .pestanas{  
     text-decoration: none;
     list-style-type: none;
     padding: 5px;    
-    font-size: 20px;
-    
+    font-size: 20px;    
 }
 
 
